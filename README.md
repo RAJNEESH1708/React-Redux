@@ -1,5 +1,5 @@
 # React
-Basic Codes for React,js 
+Basic Codes and small projects using React.js 
 
 # Keeper App
 ## Create React App
