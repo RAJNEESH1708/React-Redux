@@ -12,33 +12,39 @@ function App() {
     const {value,name} = event.target
 
    setContact((prevState) => {
-       if(name==='fName')
-       {
-          return {
-             fName:value,
-             lName:prevState.lName,
-             email:prevState.email
-          }
-       }
-       else if(name==='lName')
-       {
-        return {
-          fName:prevState.fName,
-          lName:value,
-          email:prevState.email
-        }
-       }
-       else if(name==='email')
-       {
-        return {
-          fName:prevState.fName,
-          lName:prevState.lName,
-          email:value
-        }
-       }
+      
+    setContact((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value,
+      };
+    });
+    
+    //  if(name==='fName')
+      //  {
+      //     return {
+      //        fName:value,
+      //        lName:prevState.lName,
+      //        email:prevState.email
+      //     }
+      //  }
+      //  else if(name==='lName')
+      //  {
+      //   return {
+      //     fName:prevState.fName,
+      //     lName:value,
+      //     email:prevState.email
+      //   }
+      //  }
+      //  else if(name==='email')
+      //  {
+      //   return {
+      //     fName:prevState.fName,
+      //     lName:prevState.lName,
+      //     email:value
+      //   }
+      //  }
    })
-
-
   }
 
   return (
